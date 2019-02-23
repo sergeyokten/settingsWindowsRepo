@@ -1,0 +1,7 @@
+<templateSet group="xxx">
+  <template name="stringLessonTeplate" value="&#10;//        System.out.println(s1.length());&#10;//        System.out.println(s1.isEmpty());&#10;//        System.out.println(&quot;&quot;.isEmpty());&#10;//        System.out.println(s1.substring());&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>

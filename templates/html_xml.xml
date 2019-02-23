@@ -1,0 +1,13 @@
+<templateSet group="html/xml">
+  <template name="{{" value="${$x$}" description="ElExpression ${}" toReformat="false" toShortenFQNames="true">
+    <variable name="x" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="defdiv" value="&lt;div style=&quot;background: black;width: 200px;height: 200px;&quot;&gt;&lt;/div&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>

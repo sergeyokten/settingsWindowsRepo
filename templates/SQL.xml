@@ -1,0 +1,10 @@
+<templateSet group="SQL">
+  <template name="createView" value="create or replace view $viewName$ as select $what$ from $table$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="viewName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="what" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="table" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+</templateSet>

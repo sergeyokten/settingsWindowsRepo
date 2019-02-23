@@ -1,0 +1,7 @@
+<templateSet group="custom ng/ionic">
+  <template name="moduleNgx" value=" TranslateModule.forChild({&#10;      loader: {&#10;        provide: TranslateLoader,&#10;        useFactory: createTranslateLoader,&#10;        deps: [HttpClient]&#10;      }&#10;    })," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>

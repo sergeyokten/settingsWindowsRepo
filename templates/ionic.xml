@@ -1,0 +1,48 @@
+<templateSet group="ionic">
+  <template name="mgd" value="map_get($colors,defaultApp)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="setLang" value="this.translate.setDefaultLang(&quot;en&quot;);&#10;this.translate.use(&quot;ua&quot;);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ts" value="private translate : TranslateService" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="|tr" value="{{'$x$' | translate}}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="x" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="gridOneElementCenter50%" value="&lt;ion-grid&gt;&#10; &lt;ion-row&gt;&#10;    &lt;ion-col col-6 offset-3&gt;&#10;      $element$&#10;    &lt;/ion-col&gt;&#10;  &lt;/ion-row&gt;&#10;&lt;/ion-grid&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="element" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="gridOneElementCenter30%" value="&lt;ion-grid&gt;&#10; &lt;ion-row&gt;&#10;    &lt;ion-col col-4 offset-4&gt;&#10;      $element$&#10;    &lt;/ion-col&gt;&#10;  &lt;/ion-row&gt;&#10;&lt;/ion-grid&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="element" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="gridTwoElementCenter50%" value="&lt;ion-grid&gt;&#10; &lt;ion-row&gt;&#10;    &lt;ion-col col-6 &gt;&#10;      $element1$&#10;    &lt;/ion-col&gt; &#10;    &lt;ion-col col-6 &gt;&#10;      $element2$&#10;    &lt;/ion-col&gt;&#10;  &lt;/ion-row&gt;&#10;&lt;/ion-grid&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="element1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="element2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="gridOneElementCenter80%" value="&lt;ion-grid&gt;&#10; &lt;ion-row&gt;&#10;    &lt;ion-col col-8 offset-2&gt;&#10;      $element$&#10;    &lt;/ion-col&gt;&#10;  &lt;/ion-row&gt;&#10;&lt;/ion-grid&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="element" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>

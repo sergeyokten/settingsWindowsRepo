@@ -1,0 +1,543 @@
+<templateSet group="custom">
+  <template name="main" value="public static void main(String[] args) {&#10;    $X$        &#10;}" description="public static void main(String[] args)" toReformat="false" toShortenFQNames="true">
+    <variable name="X" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ll" value="List&lt;$E$&gt; $x$" description="List&lt;E&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="E" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="x" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="depLombok" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;    &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;    &lt;version&gt;1.16.16&lt;/version&gt;&#10;    &lt;scope&gt;provided&lt;/scope&gt;&#10;&lt;/dependency&gt;" description="lombok dependency" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="depWebSpring" value="&#10;    &lt;packaging&gt;war&lt;/packaging&gt;&#10;&#10;    &lt;properties&gt;&#10;        &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;&#10;    &lt;/properties&gt;&#10;&#10;    &lt;dependencies&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#10;            &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#10;            &lt;version&gt;1.16.16&lt;/version&gt;&#10;            &lt;scope&gt;provided&lt;/scope&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--log4j--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;log4j&lt;/groupId&gt;&#10;            &lt;artifactId&gt;log4j&lt;/artifactId&gt;&#10;            &lt;version&gt;1.2.17&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--web--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;&#10;            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;&#10;            &lt;version&gt;3.0.1&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;jstl&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jstl&lt;/artifactId&gt;&#10;            &lt;version&gt;1.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--database--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;mysql&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;&#10;            &lt;version&gt;5.1.36&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.hibernate&lt;/groupId&gt;&#10;            &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;&#10;            &lt;version&gt;5.2.2.Final&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--SPRING--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-orm&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;!--mvc--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;!--JPA--&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-data-jpa&lt;/artifactId&gt;&#10;            &lt;version&gt;1.9.1.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--SPRING security--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-core&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-config&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-taglibs&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-web&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--Mail Sender--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;javax.mail&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mail&lt;/artifactId&gt;&#10;            &lt;version&gt;1.4&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--Spring Social        --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.social&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-social-core&lt;/artifactId&gt;&#10;            &lt;version&gt;1.1.4.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.social&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-social-config&lt;/artifactId&gt;&#10;            &lt;version&gt;1.1.4.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.social&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-social-web&lt;/artifactId&gt;&#10;            &lt;version&gt;1.1.4.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.social&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-social-twitter&lt;/artifactId&gt;&#10;            &lt;version&gt;1.1.2.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.social&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-social-security&lt;/artifactId&gt;&#10;            &lt;version&gt;1.1.4.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--JSON--&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jackson-core&lt;/artifactId&gt;&#10;            &lt;version&gt;2.8.8&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;&#10;            &lt;version&gt;2.8.8&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jackson-annotations&lt;/artifactId&gt;&#10;            &lt;version&gt;2.8.8&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!--WEB Sockets--&gt;&#10;        &lt;!--&lt;dependency&gt;--&gt;&#10;        &lt;!--&lt;groupId&gt;org.springframework&lt;/groupId&gt;--&gt;&#10;        &lt;!--&lt;artifactId&gt;spring-websocket&lt;/artifactId&gt;--&gt;&#10;        &lt;!--&lt;version&gt;4.2.4.RELEASE&lt;/version&gt;--&gt;&#10;        &lt;!--&lt;/dependency&gt;--&gt;&#10;&#10;        &lt;!--&lt;dependency&gt;--&gt;&#10;        &lt;!--&lt;groupId&gt;org.springframework&lt;/groupId&gt;--&gt;&#10;        &lt;!--&lt;artifactId&gt;spring-messaging&lt;/artifactId&gt;--&gt;&#10;        &lt;!--&lt;version&gt;4.2.4.RELEASE&lt;/version&gt;--&gt;&#10;        &lt;!--&lt;/dependency&gt;--&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-websocket&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-messaging&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;    &lt;/dependencies&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ii" value="&lt;input type=&quot;$x$&quot; name=&quot;$y$&quot; placeholder=&quot;$y$&quot;&gt;" description="input" toReformat="false" toShortenFQNames="true">
+    <variable name="x" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="y" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="JSP" value="true" />
+    </context>
+  </template>
+  <template name="plugMvnBuil1.8" value="&lt;build&gt;&#10;        &lt;plugins&gt;&#10;            &lt;plugin&gt;&#10;                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#10;                &lt;configuration&gt;&#10;                    &lt;source&gt;1.8&lt;/source&gt;&#10;                    &lt;target&gt;1.8&lt;/target&gt;&#10;                &lt;/configuration&gt;&#10;            &lt;/plugin&gt;&#10;        &lt;/plugins&gt;&#10;    &lt;/build&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="propMvnJava1.8" value=" &lt;properties&gt;&#10;        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;&#10;        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;&#10;    &lt;/properties&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="hikariCP" value="&#10;    @Bean&#10;    public DataSource dataSource(){&#10;//        DriverManagerDataSource dataSource = new DriverManagerDataSource();&#10;//        dataSource.setUrl(&quot;jdbc:mysql://localhost/springmvc2015&quot;);&#10;//        dataSource.setUsername(&quot;root&quot;);&#10;//        dataSource.setPassword(&quot;root&quot;);&#10;//        dataSource.setDriverClassName(&quot;com.mysql.jdbc.Driver&quot;);&#10;//        return dataSource;&#10;        HikariConfig hikariConfig = new HikariConfig();&#10;        hikariConfig.setDriverClassName(&quot;com.mysql.jdbc.Driver&quot;);&#10;        hikariConfig.setJdbcUrl(&quot;jdbc:mysql://localhost:3306/springmvc2015&quot;);&#10;        hikariConfig.setUsername(&quot;root&quot;);&#10;        hikariConfig.setPassword(&quot;root&quot;);&#10;&#10;        hikariConfig.setMaximumPoolSize(5);&#10;        hikariConfig.setConnectionTestQuery(&quot;SELECT 1&quot;);&#10;        hikariConfig.setPoolName(&quot;springHikariCP&quot;);&#10;&#10;        hikariConfig.addDataSourceProperty(&quot;dataSource.cachePrepStmts&quot;, &quot;true&quot;);&#10;        hikariConfig.addDataSourceProperty(&quot;dataSource.prepStmtCacheSize&quot;, &quot;250&quot;);&#10;        hikariConfig.addDataSourceProperty(&quot;dataSource.prepStmtCacheSqlLimit&quot;, &quot;2048&quot;);&#10;        hikariConfig.addDataSourceProperty(&quot;dataSource.useServerPrepStmts&quot;, &quot;true&quot;);&#10;&#10;        HikariDataSource dataSource = new HikariDataSource(hikariConfig);&#10;&#10;        return dataSource;&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="csrfToken" value="&lt;input type=&quot;hidden&quot;&#10;&#9;name=&quot;${_csrf.parameterName}&quot;&#10;&#9;value=&quot;${_csrf.token}&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="csrfRestToken" value="&lt;meta name=&quot;_csrf&quot; content=&quot;${_csrf.token}&quot;/&gt;&#10;&lt;meta name=&quot;_csrf_header&quot; content=&quot;${_csrf.headerName}&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="depHikari" value="&lt;dependency&gt;&#10;    &lt;groupId&gt;com.zaxxer&lt;/groupId&gt;&#10;    &lt;artifactId&gt;HikariCP&lt;/artifactId&gt;&#10;    &lt;version&gt;2.6.1&lt;/version&gt;&#10;&lt;/dependency&gt;" description="hikariCP" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="depMongoDBSpring" value="&lt;dependencies&gt;&#10;        &lt;!-- Spring framework --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!-- mongodb java driver --&gt;&#10;        &lt;!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.mongodb&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mongo-java-driver&lt;/artifactId&gt;&#10;            &lt;version&gt;3.4.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-data-mongodb&lt;/artifactId&gt;&#10;            &lt;version&gt;1.10.1.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;cglib&lt;/groupId&gt;&#10;            &lt;artifactId&gt;cglib&lt;/artifactId&gt;&#10;            &lt;version&gt;2.2.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;    &lt;/dependencies&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="propFailOnMissingWebXml" value=" &lt;properties&gt;&#10;        &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;&#10;    &lt;/properties&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="depMongoDBSprinWeb" value="    &lt;dependencies&gt;&#10;    &lt;dependency&gt;&#10;            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;&#10;            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;&#10;            &lt;version&gt;3.0.1&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;log4j&lt;/groupId&gt;&#10;            &lt;artifactId&gt;log4j&lt;/artifactId&gt;&#10;            &lt;version&gt;1.2.17&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;!-- Spring framework --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-data-mongodb&lt;/artifactId&gt;&#10;            &lt;version&gt;1.10.1.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-core&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-config&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-taglibs&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-security-web&lt;/artifactId&gt;&#10;            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;&#10;            &lt;version&gt;4.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;!-- mongodb java driver --&gt;&#10;        &lt;!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver --&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.mongodb&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mongo-java-driver&lt;/artifactId&gt;&#10;            &lt;version&gt;3.4.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;cglib&lt;/groupId&gt;&#10;            &lt;artifactId&gt;cglib&lt;/artifactId&gt;&#10;            &lt;version&gt;2.2.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jackson-core&lt;/artifactId&gt;&#10;            &lt;version&gt;2.8.5&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;&#10;            &lt;version&gt;2.8.5&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jackson-annotations&lt;/artifactId&gt;&#10;            &lt;version&gt;2.8.5&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;javax.mail&lt;/groupId&gt;&#10;            &lt;artifactId&gt;mail&lt;/artifactId&gt;&#10;            &lt;version&gt;1.4&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;    &lt;/dependencies&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="pm" value="@PostMapping(&quot;/$url$&quot;)    &#10;public String $name$($args$){&#10;    return &quot;$page$&quot;;&#10;}" description="post mapping" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="page" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="gm" value="@GetMapping(&quot;/$url$&quot;)    &#10;public String $name$($args$){&#10;    return &quot;$page$&quot;;&#10;}" description="@GetMapping" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="page" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="annLombok" value="@Entity&#10;@Getter&#10;@Setter&#10;@NoArgsConstructor&#10;@AllArgsConstructor&#10;@Builder&#10;@EqualsAndHashCode&#10;@ToString" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="plugMavenWar" value="&lt;build&gt;&#10;        &lt;pluginManagement&gt;&#10;            &lt;plugins&gt;&#10;                &lt;plugin&gt;&#10;                    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;                    &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#10;                    &lt;version&gt;3.6.1&lt;/version&gt;&#10;                    &lt;configuration&gt;&#10;                        &lt;source&gt;1.8&lt;/source&gt;&#10;                        &lt;target&gt;1.8&lt;/target&gt;&#10;                        &lt;encoding&gt;UTF-8&lt;/encoding&gt;&#10;                    &lt;/configuration&gt;&#10;                &lt;/plugin&gt;&#10;                &lt;plugin&gt;&#10;                    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#10;                    &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;&#10;                    &lt;version&gt;3.0.0&lt;/version&gt;&#10;                    &lt;configuration&gt;&#10;                        &lt;!--&lt;warSourceDirectory&gt;src/main/webapp&lt;/warSourceDirectory&gt;--&gt;&#10;                        &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;&#10;&#10;                    &lt;/configuration&gt;&#10;                &lt;/plugin&gt;&#10;            &lt;/plugins&gt;&#10;        &lt;/pluginManagement&gt;&#10;&#10;    &lt;/build&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="cdnBootstrap3" value="&lt;!-- Latest compiled and minified CSS --&gt;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&#10;          integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot; crossorigin=&quot;anonymous&quot;&gt;&#10;&#10;    &lt;!-- Optional theme --&gt;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css&quot;&#10;          integrity=&quot;sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp&quot; crossorigin=&quot;anonymous&quot;&gt;&#10;&#10;    &lt;!-- Latest compiled and minified JavaScript --&gt;&#10;    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&#10;            integrity=&quot;sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa&quot;&#10;            crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&#10;" description="bootstrap 3" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="cdnSelect2" value="&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css&quot; rel=&quot;stylesheet&quot;/&gt;&#10;    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js&quot;&gt;&lt;/script&gt;" description="select2 lib" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="rps" value="@RequestParam String $name$" description="@RequestParam" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="##list" value="&lt;#list $list$ as $obj$&gt;&lt;/#list&gt;" description="list in ftl" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="obj" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="filterUTF" value="CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();&#10;        encodingFilter.setEncoding(&quot;UTF-8&quot;);&#10;        encodingFilter.setForceEncoding(true);&#10;&#10;        FilterRegistration.Dynamic filterRegistration =&#10;                servletContext.addFilter(&quot;encodingFilter&quot;, encodingFilter);&#10;        filterRegistration.addMappingForUrlPatterns(null, true, &quot;/*&quot;);" description="CharacterEncodingFilter" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="rpi" value="@RequestParam Integer $name$" description="@RequestParam Integer xxx" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="bn" value="@Bean&#10;public $T$ $methodName$(){&#10;&#10;}" description="@Bean" toReformat="false" toShortenFQNames="true">
+    <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="methodName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="arll" value="new ArrayList&lt;&gt;();" description="ArrayList" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="pp" value="private " description="private var" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="hibernateConfig" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;!DOCTYPE hibernate-configuration&#10;        PUBLIC&#10;        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;&#10;        &quot;http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd&quot;&gt;&#10;&lt;hibernate-configuration&gt;&#10;    &lt;session-factory&gt;&#10;        &lt;property name=&quot;hibernate.connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.url&quot;&gt;jdbc:mysql://localhost/$url$?createDatabaseIfNotExist=true&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.username&quot;&gt;$user$&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.password&quot;&gt;$password$&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.show_sql&quot;&gt;true&lt;/property&gt;&#10;&#10;    &lt;/session-factory&gt;&#10;&lt;/hibernate-configuration&gt;" description="hibernate configuration" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="user" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="password" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="persistenceConfiguration" value="&lt;persistence version=&quot;2.1&quot;&#10;             xmlns=&quot;http://xmlns.jcp.org/xml/ns/persistence&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;             xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd&quot;&gt;&#10;    &lt;persistence-unit name=&quot;xxx&quot;&gt;&#10;&#10;        &lt;properties&gt;&#10;            &lt;property name=&quot;hibernate.connection.driver_class&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;&#10;            &lt;property name=&quot;hibernate.connection.url&quot; value=&quot;jdbc:mysql://localhost/$url$?createDatabaseIfNotExist=true&quot; /&gt;&#10;            &lt;property name=&quot;hibernate.connection.username&quot; value=&quot;$user$&quot; /&gt;&#10;            &lt;property name=&quot;hibernate.connection.password&quot; value=&quot;$password$&quot; /&gt;&#10;            &lt;property name=&quot;hibernate.dialect&quot; value=&quot;org.hibernate.dialect.MySQLDialect&quot; /&gt;&#10;            &lt;property name=&quot;hibernate.hbm2ddl.auto&quot; value=&quot;update&quot; /&gt;&#10;            &lt;property name=&quot;hibernate.show_sql&quot; value=&quot;true&quot;/&gt;&#10;        &lt;/properties&gt;&#10;    &lt;/persistence-unit&gt;&#10;&#10;&lt;/persistence&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="user" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="password" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ss" value="&lt;script $src$&gt;$code$&lt;/script&gt;" description="script" toReformat="false" toShortenFQNames="true">
+    <variable name="src" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="code" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="bootAppPropMySQL" value="spring.jpa.hibernate.ddl-auto=$type$&#10;spring.datasource.url=jdbc:mysql://localhost:3306/$url$?createDatabaseIfNotExist=true&#10;spring.datasource.username=$username$&#10;spring.datasource.password=$password$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="username" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="password" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="bootAppPropMongoDB" value="spring.data.mongodb.database=$springangular$&#10;spring.data.mongodb.host=localhost&#10;spring.data.mongodb.port=27017" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="springangular" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="gmr" value="@GetMapping(&quot;/$url$&quot;)    &#10;public $T$ $name$($args$){&#10;    return &quot;$objT$&quot;;&#10;}" description="get mapping REST" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="pmr" value="@PostMapping(&quot;/$url$&quot;)    &#10;public $T$ $name$($args$){&#10;    return &quot;$objT$&quot;;&#10;}" description="post mapping REST" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="objT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="gitign" value="# Eclipse&#10;.classpath&#10;.project&#10;.settings/&#10;&#10;# Intellij&#10;.idea/&#10;*.iml&#10;*.iws&#10;&#10;# Mac&#10;.DS_Store&#10;&#10;# Maven&#10;log/&#10;target/" description="gitignore properties" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sopl" value="System.out.print($obj$ + &quot; &quot;);" description="System.out.print" toReformat="false" toShortenFQNames="true">
+    <variable name="obj" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="webXmlTemplate" value="&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;&#10;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#10;         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee &#10;&#9;&#9; http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;&#10;         version=&quot;3.1&quot;&gt;&#10;&lt;/web-app&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="tt" value="this" description="this" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="contentCenter" value="display: flex!important;&#10;align-content: center!important;&#10;align-items: center!important;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="thForm" value="&lt;form th:action=&quot;@{/$url$}&quot; method=&quot;post&quot;&gt;&#10;    &lt;input type=&quot;submit&quot; value=&quot;go!&quot;&gt;&#10;&lt;/form&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="markerCode" value="//&lt;--------!!!!!!!!!" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="markerMarkup" value="&lt;!--//&lt;--------!!!!!!!!!--&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="thVar" value="[[${$var$}]]" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="configSecurity" value="@Configuration&#10;@EnableWebSecurity&#10;@ComponentScan(&quot;ua.com.owu.*&quot;)&#10;public class SecurityConfig extends WebSecurityConfigurerAdapter {&#10;&#10;&#10;    @Autowired&#10;    @Qualifier(&quot;customerServiceImpl&quot;)&#10;    UserDetailsService userDetailsService;&#10;&#10;    @Bean&#10;    public PasswordEncoder passwordEncoder() {&#10;        return new BCryptPasswordEncoder();&#10;    }&#10;&#10;    @Bean&#10;    public DaoAuthenticationProvider authenticationProvider(){&#10;        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();&#10;        provider.setPasswordEncoder(passwordEncoder());&#10;        provider.setUserDetailsService(userDetailsService);&#10;        return provider;&#10;    }&#10;&#10;&#10;    private InMemoryUserDetailsManagerConfigurer&lt;AuthenticationManagerBuilder&gt; inMemoryUserDetailsManagerConfigurer(){&#10;        return new InMemoryUserDetailsManagerConfigurer&lt;AuthenticationManagerBuilder&gt;();&#10;    }&#10;&#10;    @Autowired&#10;    public void configureGlobalSecurity(AuthenticationManagerBuilder auth, AuthenticationProvider provider) throws Exception {&#10;        inMemoryUserDetailsManagerConfigurer()&#10;                .withUser(&quot;a&quot;)&#10;                .password(&quot;a&quot;)&#10;                .authorities(&quot;ADMIN&quot;)&#10;                .and()&#10;                .configure(auth);&#10;        auth.authenticationProvider(provider);&#10;&#10;    }&#10;&#10;    @Override&#10;    protected void configure(HttpSecurity http) throws Exception {&#10;        http&#10;                .authorizeRequests()&#10;                .antMatchers(&quot;/&quot;).permitAll()&#10;                .antMatchers(&quot;/user/**&quot;).hasRole(&quot;USER&quot;)&#10;                .and()&#10;                .formLogin()&#10;                .successForwardUrl(&quot;/success&quot;) //&lt;------------&#10;//                .loginPage(&quot;/login&quot;).failureUrl(&quot;/login-error&quot;)&#10;&#10;        ;&#10;&#10;    }&#10;&#10;//    @Override&#10;//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {&#10;//        auth.inMemoryAuthentication()&#10;//                .withUser(&quot;aaa&quot;)&#10;//                .password(&quot;{noop}qqq&quot;)&#10;//                .roles(&quot;admin&quot;);&#10;//    }&#10;&#10;&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="appPropsDatasource" value="spring.datasource.url=jdbc:mysql://localhost/$database$?createDatabaseIfNotExist=true&#10;spring.datasource.username=root&#10;spring.datasource.password=root&#10;spring.jpa.hibernate.ddl-auto=create&#10;spring.jpa.show-sql=true" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="database" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="appPropsJSP" value="spring.mvc.view.prefix: /&#10;spring.mvc.view.suffix: .jsp" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="appPropsValidation" value="spring.messages.basename=validation" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="propJDBC" value="spring.jpa.hibernate.ddl-auto=update&#10;spring.datasource.url=jdbc:mysql://localhost:3306/$database$?createDatabaseIfNotExist=true&#10;spring.datasource.username=$username$&#10;spring.datasource.password=$password$&#10;spring.datasource.driver-class-name=com.mysql.jdbc.Driver&#10;spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="database" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="username" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="password" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="propMail" value="spring.mail.host=smtp.gmail.com&#10;spring.mail.port=587&#10;spring.mail.username=$email$&#10;spring.mail.password=$password$&#10;spring.mail.properties.mail.smtp.starttls.enable=true&#10;spring.mail.properties.mail.smtp.starttls.required=true&#10;spring.mail.properties.mail.smtp.auth=true&#10;spring.mail.properties.mail.smtp.connectiontimeout=5000&#10;spring.mail.properties.mail.smtp.timeout=5000&#10;spring.mail.properties.mail.smtp.writetimeout=5000" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="email" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="password" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="propMultipart" value="spring.servlet.multipart.max-file-size=10MB&#10;spring.servlet.multipart.max-request-size=10MB&#10;#spring.servlet.multipart.enabled=false&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="aa" value="@Autowired&#10;private $Class$ $name$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="createUsersList" value="let users = [&#10;        {id: 1, name: 'vasya', age: 21},&#10;        {id: 2, name: 'petya', age: 22},&#10;        {id: 3, name: 'kolya', age: 23},&#10;        {id: 4, name: 'olya', age: 21},&#10;        {id: 5, name: 'anya', age: 23},&#10;        {id: 6, name: 'max', age: 22}&#10;];" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="thXmlns" value="xmlns:th=&quot;http://www.thymeleaf.org&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ee" value="if($var$){&#10;&#10;}else{&#10;&#10;}" description="if else" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="++" value="+ &quot; &quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="mavenWrapper" value="mvn -N io.takari:maven:wrapper" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="runBootOnServerYmlInRoot" value="java -Xms64m -Xmx64m -jar target\upload-documents-1.0.jar --server.port=8080 --spring.config.additional-location=application-local.yml" description="run boot app with .yml file in root" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

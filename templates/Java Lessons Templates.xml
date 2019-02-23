@@ -1,0 +1,300 @@
+<templateSet group="Java Lessons Templates">
+  <template name="jwtBuilderParser" value=" String jwtoken = Jwts.builder()&#10;                .setSubject(&quot;vasya&quot;)&#10;                .signWith(SignatureAlgorithm.HS512, &quot;yes&quot;.getBytes())&#10;                .setExpiration(new Date(System.currentTimeMillis() + 2000))&#10;                .compact();&#10;        System.out.println(jwtoken);&#10;&#10;        Thread.sleep(600);&#10;&#10;        String subject = Jwts.parser()&#10;                .setSigningKey(&quot;yes&quot;.getBytes())&#10;                .parseClaimsJws(jwtoken)&#10;                .getBody()&#10;                .getSubject();&#10;        System.out.println(subject);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="usersArray" value="let users = [&#10;                {name: 'vasya', age: 31, status: false},&#10;                {name: 'petya', age: 30, status: true},&#10;                {name: 'kolya', age: 29, status: true},&#10;                {name: 'olya', age: 28, status: false},&#10;                {name: 'max', age: 30, status: true},&#10;                {name: 'anya', age: 31, status: false},&#10;                {name: 'oleg', age: 28, status: false},&#10;                {name: 'andrey', age: 29, status: true},&#10;                {name: 'masha', age: 30, status: true},&#10;                {name: 'olya', age: 31, status: false},&#10;                {name: 'max', age: 31, status: true}&#10;            ];" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="usersID_NAME" value="users.add(new User(2, &quot;kokos&quot;));&#10;users.add(new User(1, &quot;ananas&quot;));&#10;users.add(new User(3, &quot;banan&quot;));&#10;users.add(new User(5, &quot;tomat&quot;));&#10;users.add(new User(4, &quot;potatos&quot;));&#10;users.add(new User(6, &quot;mango&quot;));" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="usersID_NAME_BOOLEAN" value="users.add(new User(2, &quot;kokos&quot;, true));&#10;users.add(new User(1, &quot;ananas&quot;, true));&#10;users.add(new User(3, &quot;banan&quot;, false));&#10;users.add(new User(5, &quot;tomat&quot;, false));&#10;users.add(new User(4, &quot;potatos&quot;, true));&#10;users.add(new User(6, &quot;mango&quot;, false));" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ajaxMultipartFormData" value="&#10;  $.ajax({&#10;    url: &quot;/$url$&quot;,&#10;    type: &quot;POST&quot;,&#10;    data: new FormData($(&quot;$formReference$&quot;)[0]),&#10;    enctype: 'multipart/form-data',&#10;    processData: false,&#10;    contentType: false,&#10;    cache: false,&#10;    success: function () {&#10;      $work$&#10;    },&#10;    error: function (err) {&#10;      console.log(err);&#10;    }&#10;  });&#10;" description="upload file with AJAX" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="formReference" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="work" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="loggerObject" value="    private static final Logger logger = LoggerFactory.getLogger(MainController.class);&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="propLogger" value="logging.level.root= WARN&#10;logging.level.org.springframework.security= DEBUG&#10;logging.level.org.springframework.web= ERROR&#10;logging.level.org.hibernate= DEBUG&#10;logging.level.org.apache.commons.dbcp2= DEBUG&#10;#logging.level.oktenweb.springbootproject.controllers= TRACE&#10;logging.file = mylogfile.log&#10;logging.path = concretepage/logs&#10;logging.pattern.file= %d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n&#10;logging.pattern.console= %d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n  " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="mailSender" value=" @PropertySource(&quot;classpath:application.properties&quot;)&#10; @Autowired&#10;    JavaMailSender javaMailSender;&#10;    @Autowired&#10;    Environment env;&#10;&#10;    public void send(String email) {&#10;        MimeMessage mimeMessage = javaMailSender.createMimeMessage();&#10;        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage);&#10;        try {&#10;            mimeMessage.setFrom(new InternetAddress(env.getProperty(&quot;email.username&quot;)));&#10;            helper.setTo(email);&#10;            helper.setText(&quot;message&quot;,true);&#10;        } catch (MessagingException e) {&#10;            e.printStackTrace();&#10;        }&#10;            javaMailSender.send(mimeMessage);&#10;&#10;    }" description="Java Mail Sender" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityAnnotations" value="@Configuration&#10;@EnableWebSecurity" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityPart1InMemoryUser" value=" @Override&#10;    protected void configure(AuthenticationManagerBuilder auth) throws Exception {&#10;        auth.inMemoryAuthentication().withUser(&quot;user&quot;).password(&quot;{noop}pass&quot;).roles(&quot;ADMIN&quot;);&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityPart2ConfigureHttp" value="@Override&#10;protected void configure(HttpSecurity http) throws Exception {&#10;    http&#10;            .authorizeRequests()&#10;            .antMatchers(&quot;/&quot;, &quot;/home&quot;).permitAll()&#10;            .anyRequest().authenticated()&#10;            .antMatchers(&quot;/admin/**&quot;).hasRole(&quot;ADMIN&quot;)&#10;            .and()&#10;            .formLogin()&#10;            .loginPage(&quot;/login&quot;)&#10;            .successForwardUrl(&quot;/successURL&quot;)//handle with post mapping in controller&#10;            .failureUrl(&quot;/login?error&quot;).permitAll()&#10;            .permitAll()&#10;            .and()&#10;            .logout()&#10;            .logoutRequestMatcher(new AntPathRequestMatcher(&quot;/logout&quot;)).&#10;            logoutSuccessUrl(&quot;/login&quot;)&#10;            .permitAll();&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityPart5PasswordEncoder" value="@Bean&#10;    public PasswordEncoder passwordEncoder() {&#10;        return new BCryptPasswordEncoder();&#10;    }&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityPart6DaoAuthProvider" value="&#10;    @Bean&#10;    public DaoAuthenticationProvider authenticationProvider() {&#10;        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();&#10;        provider.setUserDetailsService(userDetailsService);&#10;        provider.setPasswordEncoder(passwordEncoder());&#10;        return provider;&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityPart4LoginPage" value="&lt;!DOCTYPE html&gt;&#10;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:th=&quot;http://www.thymeleaf.org&quot;&#10;      xmlns:sec=&quot;http://www.thymeleaf.org/thymeleaf-extras-springsecurity3&quot;&gt;&#10;    &lt;head&gt;&#10;        &lt;title&gt;Spring Security Example &lt;/title&gt;&#10;    &lt;/head&gt;&#10;    &lt;body&gt;&#10;        &lt;div th:if=&quot;${param.error}&quot;&gt;&#10;            Invalid username and password.&#10;        &lt;/div&gt;&#10;        &lt;div th:if=&quot;${param.logout}&quot;&gt;&#10;            You have been logged out.&#10;        &lt;/div&gt;&#10;        &lt;form th:action=&quot;@{/login}&quot; method=&quot;post&quot;&gt;&#10;            &lt;div&gt;&lt;label&gt; User Name : &lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt; &lt;/label&gt;&lt;/div&gt;&#10;            &lt;div&gt;&lt;label&gt; Password: &lt;input type=&quot;password&quot; name=&quot;password&quot;/&gt; &lt;/label&gt;&lt;/div&gt;&#10;            &lt;div&gt;&lt;input type=&quot;submit&quot; value=&quot;Sign In&quot;/&gt;&lt;/div&gt;&#10;        &lt;/form&gt;&#10;    &lt;/body&gt;&#10;&lt;/html&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="securityPart3WebConfig" value="@Override&#10;    public void addViewControllers(ViewControllerRegistry registry) {&#10;        //get method&#10;        registry.addViewController(&quot;/login&quot;).setViewName(&quot;login&quot;);&#10;        registry.addViewController(&quot;/url&quot;).setViewName(&quot;viewName&quot;);&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="validationPropertiesBind" value="spring.messages.basename=validation" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="securityPart7InMemoryNew" value=" private InMemoryUserDetailsManagerConfigurer&lt;AuthenticationManagerBuilder&gt; inMemoryConfigurer() {&#10;        return new InMemoryUserDetailsManagerConfigurer&lt;AuthenticationManagerBuilder&gt;();&#10;    }&#10;&#10;    @Autowired&#10;    public void configureGlobal(AuthenticationManagerBuilder auth,&#10;                                AuthenticationProvider provider) throws Exception {&#10;        inMemoryConfigurer()&#10;                .withUser(&quot;admin&quot;)&#10;                .password(&quot;{noop}admin&quot;)&#10;                .authorities(&quot;ADMIN&quot;)&#10;                .and()&#10;                .configure(auth);&#10;        auth.authenticationProvider(provider);&#10;&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="dockerfile" value="&#10;&#10;# Start with a base image containing Java runtime&#10;FROM openjdk:8-jdk-alpine&#10;&#10;&#10;# Add a volume pointing to /tmp&#10;VOLUME /tmp&#10;&#10;# Make port 8085 available to the world outside this container&#10;EXPOSE 7001&#10;&#10;# The application's jar file&#10;ARG JAR_FILE=target/app.jar&#10;&#10;# Add the application's jar to the container&#10;ADD ${JAR_FILE} app.jar&#10;&#10;# Run the jar file&#10;ENTRYPOINT [&quot;java&quot;,&quot;-Djava.security.egd=file:/dev/./urandom&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]&#10;&#10;#build script&#10;#docker build -f Dockerfile -t app .&#10;&#10;# run script&#10;#docker run -it -p exposePort:serverPort app&#10;&#10;&#10;#list all containers&#10;#Docker ps -a&#10;#docker rm containerName&#10;&#10;&#10;#    docker kill $(docker ps -q)&#10;#     docker rm $(docker ps -a -q)&#10;#     docker rmi $(docker images -q)&#10;&#10;# Delete all containers&#10;#docker rm $(docker ps -a -q)&#10;# Delete all images&#10;#docker rmi $(docker images -q)&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="basicHttpSecurityPart1Users" value=" @Override&#10;        protected void configure(AuthenticationManagerBuilder auth) throws Exception {&#10;            auth.inMemoryAuthentication().withUser(&quot;asd&quot;).password(&quot;{noop}asd&quot;).roles(&quot;ADMIN&quot;);&#10;            auth.inMemoryAuthentication().withUser(&quot;qwe&quot;).password(&quot;{noop}qwe&quot;).roles(&quot;USER&quot;);&#10;        }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="basicHttpSecurityPart2RequestPermissionConfig" value=" @Override&#10;        protected void configure(HttpSecurity http) throws Exception {&#10;            http.csrf().disable()&#10;                    .authorizeRequests()&#10;                    .antMatchers(&quot;/&quot;).hasAnyRole(&quot;USER&quot;,&quot;ADMIN&quot;)&#10;                    .antMatchers(&quot;/admin/**&quot;).hasRole(&quot;ADMIN&quot;)&#10;                    .antMatchers(&quot;/user/**&quot;).hasRole(&quot;USER&quot;)&#10;                    .and()&#10;                    .httpBasic() // support of basic http configuration&#10;                    .realmName(&quot;MY_TEST_REALM&quot;)&#10;                    // setting if auth failed customBasicAuthEntryPoint() must be define&#10;                    //.authenticationEntryPoint(customBasicAuthEntryPoint())&#10;                    //if We don't need sessions to be created.&#10;                    .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);&#10;&#10;        }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="basicHttpSecurityPart3CustomEntryPoint" value="&#10;import AuthenticationException;&#10;import BasicAuthenticationEntryPoint;&#10;&#10;import ServletException;&#10;import HttpServletRequest;&#10;import HttpServletResponse;&#10;import IOException;&#10;import PrintWriter;&#10;&#10;public class CustomBasicAuthEntryPoint extends BasicAuthenticationEntryPoint {&#10;    @Override&#10;    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {&#10;        //if auth failed send error response&#10;        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);&#10;        response.addHeader(&quot;WWW-Authenticate&quot; , &quot;XXXXXXXXX&quot;);&#10;        PrintWriter writer = response.getWriter();&#10;        writer.println(&quot;HTTP Status 401 : &quot; + authException.getMessage());&#10;    }&#10;&#10;&#10;//    In short, pages in the same realm should share credentials. If your credentials work for a page with the realm &quot;My Realm&quot;, it should be assumed that the same username and password combination should work for another page with the same realm.&#10;/*&#10;A realm can be seen as an area (not a particular page, it could be a group of pages) for which the credentials are used; this is also the string that will be shown when the browser pops up the login window, e.g.&#10;&#10;    Please enter your username and password for &lt;realm name&gt;:&#10;&#10;    When the realm changes, the browser may show another popup window if it doesn't have credentials for that particular realm.&#10;*/&#10;    @Override&#10;    public void afterPropertiesSet() throws Exception {&#10;        setRealmName(&quot;MY_TEST_REALM&quot;);&#10;        super.afterPropertiesSet();&#10;&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="basicHttpSecurityPart4AllowOptionsRequest" value="&#10;        /* To allow Pre-flight [OPTIONS] request from browser */&#10;    //    @Override&#10;    //    public void configure(WebSecurity web) throws Exception {&#10;    //        web.ignoring().antMatchers(HttpMethod.OPTIONS, &quot;/**&quot;);&#10;    //    }&#10;    }&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="basicHttpSecurityPart5FromDatabaseImplementation" value="&#10;    @Autowired&#10;    @Qualifier(&quot;userService&quot;)&#10;    private UserDetailsService userDetailsService;&#10;&#10;&#10;    @Bean&#10;    public PasswordEncoder passwordEncoder() {&#10;        return new BCryptPasswordEncoder();&#10;    }&#10;&#10;    @Bean&#10;    public DaoAuthenticationProvider daoAuthenticationProvider() {&#10;        System.out.println(&quot;daoAuthenticationProvider&quot;);&#10;        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();&#10;        daoAuthenticationProvider.setUserDetailsService(userDetailsService);&#10;        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());&#10;        return daoAuthenticationProvider;&#10;&#10;    }&#10;&#10;    @Override&#10;    protected void configure(AuthenticationManagerBuilder auth) throws Exception {&#10;        System.out.println(&quot;configure&quot;);&#10;        auth.authenticationProvider(daoAuthenticationProvider());&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityFiltersSecurityConfig" value="@EnableWebSecurity&#10;@Configuration&#10;public class SecurityConfig extends WebSecurityConfigurerAdapter {&#10;&#10;    @Override&#10;    protected void configure(AuthenticationManagerBuilder auth) throws Exception {&#10;        auth.inMemoryAuthentication().withUser(&quot;user&quot;).password(&quot;{noop}pass&quot;).roles(&quot;ADMIN&quot;);&#10;    }&#10;&#10;    @Override&#10;    protected void configure(HttpSecurity http) throws Exception {&#10;        http&#10;                .authorizeRequests()&#10;                .anyRequest().permitAll()&#10;//                .antMatchers(HttpMethod.POST, &quot;/login&quot;, &quot;/save&quot;).permitAll()&#10;//                .antMatchers(&quot;/&quot;, &quot;/home&quot;).permitAll()&#10;//                .anyRequest().authenticated()&#10;//                .antMatchers(&quot;/admin/**&quot;).hasRole(&quot;ADMIN&quot;)&#10;                .and()&#10;                .sessionManagement()&#10;                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)&#10;                .and()&#10;                .addFilterBefore(new CustomAuthenticationFilter(authenticationManager()), CustomAuthorizationFilter.class)&#10;//                .addFilterBefore(new CustomAuthorizationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class)&#10;                .csrf().disable();&#10;&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityFilterCustomAuthenticationFilter" value="&#10;// if user without token (first attempt to login)&#10;public class CustomAuthenticationFilter extends AbstractAuthenticationProcessingFilter {&#10;&#10;    AuthenticationManager authenticationManager;&#10;&#10;    public CustomAuthenticationFilter(AuthenticationManager authenticationManager) {&#10;        super(new AntPathRequestMatcher(&quot;/loginURL&quot;,&quot;POST&quot;));&#10;        this.authenticationManager = authenticationManager;&#10;    }&#10;&#10;    // на основе имеющихся в запросе данных наполнить объект индентификации&#10;    @Override&#10;    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {&#10;        System.out.println(&quot;attempt&quot;);&#10;        try {&#10;            User user = new ObjectMapper().readValue(request.getInputStream(), User.class);&#10;            System.out.println(user);&#10;//            System.out.println(request.getParameter(&quot;username&quot;));&#10;//            System.out.println(request.getParameter(&quot;password&quot;));&#10;            System.out.println(user + &quot;USER!!!!!!!!!!!!!&quot;);&#10;            if (user.getUsername().equals(&quot;user&quot;) &amp;&amp; user.getPassword().equals(&quot;pass&quot;)) {&#10;&#10;                return new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword(), user.getRoles());&#10;            } else {&#10;                return null;&#10;            }&#10;        } catch (Exception e) {&#10;            e.printStackTrace();&#10;            throw new RuntimeException();&#10;        }&#10;&#10;    }&#10;&#10;    @Override&#10;    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {&#10;        System.out.println(authResult + &quot;!!!!!!!!!!!!!!!!!&quot;);&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="securityFilterCustomAuthorizationFilter" value="public class CustomAuthorizationFilter extends BasicAuthenticationFilter  {&#10;    public CustomAuthorizationFilter(AuthenticationManager authenticationManager) {&#10;        super(authenticationManager);&#10;    }&#10;&#10;&#10;    @Override&#10;    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {&#10;        String dirtyToken = request.getHeader(&quot;token&quot;);&#10;        System.out.println(dirtyToken+ &quot; token&quot;);&#10;        UsernamePasswordAuthenticationToken authenticationToken = null;&#10;        if (StringUtils.isEmpty(dirtyToken) || !dirtyToken.startsWith(&quot;yes&quot;)) {&#10;            chain.doFilter(request, response);&#10;            return;&#10;        } else {&#10;            String clearToken = dirtyToken.replace(&quot;yes &quot;, &quot;&quot;);&#10;            String username = clearToken.replace(&quot;name=&quot;, &quot;&quot;);&#10;            // найти юзера по имени ... сформировать объект индентификации&#10;            authenticationToken = new UsernamePasswordAuthenticationToken(username, null, new ArrayList&lt;&gt;());&#10;        }&#10;        SecurityContextHolder.getContext().setAuthentication(authenticationToken);&#10;        chain.doFilter(request, response);&#10;&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="decodeHeaderBase64" value="final String authorization = httpRequest.getHeader(&quot;Authorization&quot;);&#10;if (authorization != null &amp;&amp; authorization.toLowerCase().startsWith(&quot;basic&quot;)) {&#10;    // Authorization: Basic base64credentials&#10;    String base64Credentials = authorization.substring(&quot;Basic&quot;.length()).trim();&#10;    byte[] credDecoded = Base64.getDecoder().decode(base64Credentials);&#10;    String credentials = new String(credDecoded, StandardCharsets.UTF_8);&#10;    // credentials = username:password&#10;    final String[] values = credentials.split(&quot;:&quot;, 2);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="UserDetailsOnUser" value="&#10;import org.springframework.security.core.GrantedAuthority;&#10;import org.springframework.security.core.authority.SimpleGrantedAuthority;&#10;import org.springframework.security.core.userdetails.UserDetails;&#10;&#10;import javax.persistence.*;&#10;import java.util.Arrays;&#10;import java.util.Collection;&#10;import java.util.List;&#10;import java.util.stream.Collectors;&#10;&#10;@Entity&#10;public class User implements UserDetails {&#10;    @Id&#10;    @GeneratedValue(strategy = GenerationType.IDENTITY)&#10;    private int id;&#10;    private String username;&#10;    private String password;&#10;    @ElementCollection(fetch = FetchType.EAGER)&#10;    private List&lt;String&gt; roles = Arrays.asList(&quot;ROLE_USER&quot;);&#10;&#10;    public User() {&#10;    }&#10;&#10;    public User(String username, String password) {&#10;        this.username = username;&#10;        this.password = password;&#10;    }&#10;&#10;    public User(String username, String password, List&lt;String&gt; roles) {&#10;        this.username = username;&#10;        this.password = password;&#10;        this.roles = roles;&#10;    }&#10;&#10;    @Override&#10;    public String toString() {&#10;        return &quot;User{&quot; +&#10;                &quot;id=&quot; + id +&#10;                &quot;, username='&quot; + username + '\'' +&#10;                &quot;, password='&quot; + password + '\'' +&#10;                &quot;, roles=&quot; + roles +&#10;                '}';&#10;    }&#10;&#10;    @Override&#10;    public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {&#10;        return roles.stream().map(s -&gt; new SimpleGrantedAuthority(s)).collect(Collectors.toList());&#10;    }&#10;&#10;&#10;    public int getId() {&#10;        return id;&#10;    }&#10;&#10;    public void setId(int id) {&#10;        this.id = id;&#10;    }&#10;&#10;    @Override&#10;    public String getUsername() {&#10;        return username;&#10;    }&#10;&#10;    public void setUsername(String username) {&#10;        this.username = username;&#10;    }&#10;&#10;    @Override&#10;    public String getPassword() {&#10;        return password;&#10;    }&#10;&#10;    public void setPassword(String password) {&#10;        this.password = password;&#10;    }&#10;&#10;    public List&lt;String&gt; getRoles() {&#10;        return roles;&#10;    }&#10;&#10;    public void setRoles(List&lt;String&gt; roles) {&#10;        this.roles = roles;&#10;    }&#10;&#10;    @Override&#10;    public boolean isAccountNonExpired() {&#10;        return true;&#10;    }&#10;&#10;    @Override&#10;    public boolean isAccountNonLocked() {&#10;        return true;&#10;    }&#10;&#10;    @Override&#10;    public boolean isCredentialsNonExpired() {&#10;        return true;&#10;    }&#10;&#10;    @Override&#10;    public boolean isEnabled() {&#10;        return true;&#10;    }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="UserDAOJpaRepositoryForSecurity" value="&#10;&#10;import org.springframework.data.jpa.repository.JpaRepository;&#10;&#10;public interface UserDAO extends JpaRepository&lt;User, Integer&gt; {&#10;&#10;    User findByUsername(String username);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="UserDetailsServiceInterfaceCRUD" value="&#10;&#10;import org.springframework.security.core.userdetails.UserDetailsService;&#10;&#10;import java.util.List;&#10;&#10;public interface UserService extends UserDetailsService {&#10;&#10;    void save(User user);&#10;&#10;    List&lt;User&gt; findAll();&#10;&#10;    User findOneById(Integer id);&#10;&#10;    void delete(Integer id);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="UserDetailsServiceImpl" value="&#10;import oktenweb.springcustomhttpsecurity.dao.UserDAO;&#10;import oktenweb.springcustomhttpsecurity.models.User;&#10;import oktenweb.springcustomhttpsecurity.service.UserService;&#10;import org.springframework.beans.factory.annotation.Autowired;&#10;&#10;&#10;import org.springframework.security.core.userdetails.UserDetails;&#10;import org.springframework.security.core.userdetails.UsernameNotFoundException;&#10;import org.springframework.security.crypto.password.PasswordEncoder;&#10;import org.springframework.stereotype.Service;&#10;&#10;import java.util.List;&#10;&#10;@Service&#10;public class UserServiceImpl implements UserService {&#10;    @Autowired&#10;    private PasswordEncoder passwordEncoder;&#10;&#10;    @Autowired&#10;    private UserDAO userDAO;&#10;&#10;    @Override&#10;    public void save(User user) {&#10;        user.setUsername(passwordEncoder.encode(user.getUsername()));&#10;        userDAO.save(user);&#10;    }&#10;&#10;    @Override&#10;    public List&lt;User&gt; findAll() {&#10;        return userDAO.findAll();&#10;    }&#10;&#10;    @Override&#10;    public User findOneById(Integer id) {&#10;        return userDAO.findById(id).get();&#10;    }&#10;&#10;    @Override&#10;    public void delete(Integer id) {&#10;        userDAO.deleteById(id);&#10;    }&#10;&#10;    @Override&#10;    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {&#10;        return userDAO.findByUsername(username);&#10;    }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="httpSecurityRestFirstLoginFilter" value="extends AbstractAuthenticationProcessingFilter" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="hibernateXmlConfig" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;!DOCTYPE hibernate-configuration PUBLIC&#10;        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;&#10;        &quot;http://hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;&gt;&#10;&lt;hibernate-configuration&gt;&#10;    &lt;session-factory&gt;&#10;        &lt;property name=&quot;hibernate.connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.url&quot;&gt;jdbc:mysql://localhost:3306/criteriaX?createDatabaseIfNotExist=true&#10;        &lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.username&quot;&gt;root&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.connection.password&quot;&gt;root&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.show_sql&quot;&gt;true&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQL57Dialect&lt;/property&gt;&#10;        &lt;property name=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/property&gt;&#10;        &lt;!--&lt;property name=&quot;hibernate.connection.pool_size&quot;&gt;1&lt;/property&gt;--&gt;&#10;        &lt;!--&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/property&gt;--&gt;&#10;&#10;    &lt;/session-factory&gt;&#10;&lt;/hibernate-configuration&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="hibernateSessionFactory" value="  SessionFactory sessionFactory;&#10;        sessionFactory = new Configuration().configure()&#10;                .addAnnotatedClass(User.class)&#10;                .addAnnotatedClass(Email.class) // configures settings&#10;                // from&#10;                // hibernate.cfg.xml&#10;                .buildSessionFactory();&#10;&#10;        Session session = sessionFactory.openSession();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="criteriaAPIWhereFetch" value="        CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();&#10;        CriteriaQuery&lt;Object&gt; criteriaQuery = criteriaBuilder.createQuery();&#10;        Root&lt;$Class$&gt; userRoot = criteriaQuery.from($Class$.class);&#10;//        userRoot.fetch($field$);&#10;        criteriaQuery.select(userRoot);&#10;        criteriaQuery.where(criteriaBuilder.equal(&#10;                userRoot.get($fieldName$), $equalToValue$&#10;                )&#10;        );&#10;&#10;        List&lt;Object&gt; list1 = session.createQuery(criteriaQuery).list();&#10;        System.out.println(list1);&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="equalToValue" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="httpJWT1_security_class" value="@Configuration&#10;public class Security extends WebSecurityConfigurerAdapter {&#10;&#10;    @Override&#10;    protected void configure(AuthenticationManagerBuilder auth) throws Exception {&#10;        auth.inMemoryAuthentication().withUser(&quot;asd&quot;).password(&quot;{noop}asd&quot;).roles(&quot;ADMIN&quot;);&#10;        auth.inMemoryAuthentication().withUser(&quot;qwe&quot;).password(&quot;{noop}qwe&quot;).roles(&quot;USER&quot;);&#10;    }&#10;&#10;    @Override&#10;    protected void configure(HttpSecurity http) throws Exception {&#10;        http&#10;                .csrf()&#10;                .disable()&#10;                .authorizeRequests()&#10;                .antMatchers(&quot;/&quot;).permitAll()&#10;                .antMatchers(HttpMethod.POST, &quot;/login&quot;).permitAll()&#10;                .anyRequest().authenticated()&#10;                .and()&#10;                // We filter the api/login requests&#10;                // And filter other requests to check the presence of JWT in header&#10;                .addFilterBefore(new RequestProcessingJWTFilter(), UsernamePasswordAuthenticationFilter.class)&#10;                .addFilterBefore(new LoginFilter(&quot;/login&quot;, authenticationManager()), UsernamePasswordAuthenticationFilter.class);&#10;&#10;&#10;    }&#10;&#10;&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="httpJWT2_login_filter_class" value="&#10;public class LoginFilter extends AbstractAuthenticationProcessingFilter {&#10;&#10;    public LoginFilter(String url, AuthenticationManager authManager) {&#10;        super(new AntPathRequestMatcher(url));&#10;        setAuthenticationManager(authManager);&#10;    }&#10;&#10;&#10;//    During the authentication attempt,&#10;// which is dealt by the attemptAuthentication method,&#10;// we retrieve the username and password from the request.&#10;// After they are retrieved, we use the AuthenticationManager to verify that these details match with an existing user.&#10;// If it does, we enter the successfulAuthentication method.&#10;// In this method we fetch the name from the authenticated user,&#10;// and pass it on to TokenAuthenticationService, which will then add a JWT to the response.&#10;&#10;    private AccountCredentials creds;&#10;&#10;    @Override&#10;    public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException, IOException, ServletException {&#10;        //this method react  on /login url  and retrive body from request&#10;        //then map it to model AccountCredential&#10;        creds = new ObjectMapper()&#10;                .readValue(httpServletRequest.getInputStream(), AccountCredentials.class);&#10;&#10;        System.out.println(creds);&#10;        // then  get default method getAuthenticationManager()&#10;        // and set Authentication object based on data from creds object&#10;&#10;        // if auth process if success we jump to line 65 successfulAuthentication()&#10;        return getAuthenticationManager().authenticate(&#10;                new UsernamePasswordAuthenticationToken(&#10;                        creds.getUsername(),&#10;                        creds.getPassword(),&#10;                        Collections.emptyList()&#10;                )&#10;        );&#10;&#10;&#10;    }&#10;&#10;    @Override&#10;    protected void successfulAuthentication(&#10;            HttpServletRequest req,&#10;            HttpServletResponse res, FilterChain chain,&#10;            Authentication auth) throws IOException, ServletException {&#10;&#10;        // if in prev method we was authenticate&#10;        // we create token&#10;&#10;        String jwtoken = Jwts.builder()&#10;                .setSubject(auth.getName())&#10;                .signWith(SignatureAlgorithm.HS512, &quot;yes&quot;.getBytes())&#10;                .setExpiration(new Date(System.currentTimeMillis() + 200000))&#10;                .compact();&#10;        //and add it to header&#10;        res.addHeader(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtoken);&#10;&#10;    }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="httpJWT3_RequestProcessing_filter_class" value="&#10;public class RequestProcessingJWTFilter extends GenericFilterBean {&#10;&#10;    // react on every url (but we can change it if implement another filter)&#10;    @Override&#10;    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {&#10;        Authentication authentication = null;&#10;//&#10;&#10;        HttpServletRequest httpServletRequest = (HttpServletRequest) request;&#10;        // and check presents of token in header Authorization&#10;        String token = httpServletRequest.getHeader(&quot;Authorization&quot;);&#10;        // if present&#10;        if (token != null) {&#10;            // parse it and retrive body subject from&#10;            String user = Jwts.parser()&#10;                    .setSigningKey(&quot;yes&quot;.getBytes())&#10;                    .parseClaimsJws(token.replace(&quot;Bearer&quot;, &quot;&quot;))&#10;                    .getBody()&#10;                    .getSubject();&#10;            System.out.println(user + &quot;!!!!!!!!!!!---!!!!!&quot;);&#10;&#10;            //after parse of token we create Authentication object&#10;            authentication = new UsernamePasswordAuthenticationToken(user, null, Collections.emptyList());&#10;        }&#10;        // and set it to global security context&#10;        SecurityContextHolder.getContext()&#10;                .setAuthentication(authentication);&#10;        chain.doFilter(request, response);&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="csrfScript" value=" $(function () {&#10;                var token = $(&quot;meta[name='_csrf']&quot;).attr(&quot;content&quot;);&#10;                var header = $(&quot;meta[name='_csrf_header']&quot;).attr(&quot;content&quot;);&#10;                $(document).ajaxSend(function (e, xhr, options) {&#10;                    xhr.setRequestHeader(header, token);&#10;                });&#10;            });" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ws_1_pom_dependencies" value="    &lt;dependency&gt;&#10;            &lt;groupId&gt;org.webjars&lt;/groupId&gt;&#10;            &lt;artifactId&gt;sockjs-client&lt;/artifactId&gt;&#10;            &lt;version&gt;1.0.2&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.webjars&lt;/groupId&gt;&#10;            &lt;artifactId&gt;stomp-websocket&lt;/artifactId&gt;&#10;            &lt;version&gt;2.3.3&lt;/version&gt;&#10;        &lt;/dependency&gt;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.webjars&lt;/groupId&gt;&#10;            &lt;artifactId&gt;webjars-locator-core&lt;/artifactId&gt;&#10;        &lt;/dependency&gt;&#10;&#10;&#10;        &lt;dependency&gt;&#10;            &lt;groupId&gt;org.webjars&lt;/groupId&gt;&#10;            &lt;artifactId&gt;jquery&lt;/artifactId&gt;&#10;            &lt;version&gt;3.1.0&lt;/version&gt;&#10;        &lt;/dependency&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ws_2_home_dependency_scripts" value="&lt;script src=&quot;/webjars/jquery/jquery.min.js&quot;&gt;&lt;/script&gt;&#10;&lt;script src=&quot;/webjars/sockjs-client/sockjs.min.js&quot;&gt;&lt;/script&gt;&#10;&lt;script src=&quot;/webjars/stomp-websocket/stomp.min.js&quot;&gt;&lt;/script&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="ws_3_connect_script" value="            function connect() {&#10;                var socket = new SockJS('/socketName');&#10;                stompClient = Stomp.over(socket);&#10;                stompClient.connect({}, function (frame) {&#10;                    console.log('connected')&#10;                });&#10;            }&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ws_4_send_function" value="function sendName() {&#10;    stompClient.send(&quot;/allowDestinationPrefix/msg&quot;, {}, JSON.stringify({'name': $(&quot;#name&quot;).val()}));&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ws_5_ws_configuration" value="&#10;@Configuration&#10;@EnableWebSocketMessageBroker&#10;public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {&#10;    @Override&#10;    public void registerStompEndpoints(StompEndpointRegistry registry) {&#10;        registry.addEndpoint(&quot;/socketName&quot;).withSockJS();&#10;    }&#10;&#10;    @Override&#10;    public void configureMessageBroker(MessageBrokerRegistry config) {&#10;        config.enableSimpleBroker(&quot;/chanelName&quot;);&#10;        config.setApplicationDestinationPrefixes(&quot;/allowDestinationPrefix&quot;);&#10;    }&#10;&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ws_6_msg_handler" value=" @MessageMapping(&quot;/msg&quot;) // /allowDestinationPrefix/msg&#10;    @SendTo(&quot;/chanelName/outPoint&quot;)&#10;    public OutputModel greeting(InputModel message) throws Exception {&#10;        return null;&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ws_7_model_InputModel" value="@Data&#10;@AllArgsConstructor&#10;@NoArgsConstructor&#10;@FieldDefaults(level = AccessLevel.PRIVATE)&#10;public class InputModel {&#10;    String message;&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ws_8_output_model" value="&#10;public class OutputModel {&#10;    private String outMessage;&#10;&#10;    public String getOutMessage() {&#10;        return outMessage;&#10;    }&#10;&#10;    public void setOutMessage(String outMessage) {&#10;        this.outMessage = outMessage;&#10;    }&#10;&#10;    public OutputModel(InputModel inputModel) {&#10;&#10;        this.outMessage = new Date(System.currentTimeMillis()) + inputModel.getName();&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="ws_9_show_greeting_function" value="&#10;            function showGreeting(message) {&#10;                $(&quot;#greetings&quot;).append(&quot;&lt;tr&gt;&lt;td&gt;&quot; + message + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;);&#10;            }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ws_10_subcribe_recive" value=" stompClient.subscribe('/chanelName/outPoint', function (greeting) {&#10;                        showGreeting(JSON.parse(greeting.body).content);&#10;                    });" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

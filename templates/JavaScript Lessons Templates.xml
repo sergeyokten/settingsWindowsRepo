@@ -1,0 +1,55 @@
+<templateSet group="JavaScript Lessons Templates">
+  <template name="google_maps_api_init_map" value="function initMap() {&#10;                map = new google.maps.Map(document.getElementById('map'), {&#10;                    center: {lat: $lat$, lng: $lng$},&#10;                    zoom: 8&#10;                });&#10;            }" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="lat" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="lng" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ECMAScript6" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="google_maps_api_script_async_defer" value=" &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?key=AIzaSyBGmyqfYXWuVBwLJFWiZiXJZ0zCgDawUqA&amp;callback=initMap&quot;&#10;                async defer&gt;&lt;/script&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="google_map_api_marker" value="var marker = new google.maps.Marker({&#10;    position: $myLatLng$,&#10;    map: $map$,&#10;    title: 'OKTENWEB'&#10;  });" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="myLatLng" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="map" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ECMAScript6" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="xmlHttpRequest" value="// 1. Создаем&#10;var xhr = new XMLHttpRequest();&#10;&#10;// 2. Конфигурируем &#10;xhr.open('GET', 'http://localhost:3000/users, true);&#10;&#10;// 3. Отправляем&#10;xhr.send();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="angularNgOutDirPathSpringBoot" value="&quot;outDir&quot;: &quot;../src/main/resources/static&quot;," description="path in angular-cli.json file to build ng project for SB" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+</templateSet>
